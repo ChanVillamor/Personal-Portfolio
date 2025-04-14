@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "home": "https://github.com/ChanVillamor/Personal-Portfolio",
+  "home": "https://ChanVillamorgithub.io/Personal-Portfolio",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "framer-motion": "^12.6.5",
