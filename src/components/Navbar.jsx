@@ -3,6 +3,7 @@ import { navLinks } from '../data';
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
+
 const Navbar = () => {
   const navRef = useRef();
   const [showLeft, setShowLeft] = useState(false);
