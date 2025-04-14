@@ -1,0 +1,182 @@
+import React from 'react';
+import Footer from '../components/Footer';
+import { motion } from 'framer-motion';
+import Button from '../components/Button';
+import { FaDownload } from 'react-icons/fa';
+
+
+function Resume() {
+  return (
+    <div className="flex flex-col min-h-screen bg-beige">
+      {/* Main Content */}
+      <section className="flex-grow w-full flex flex-col items-center mt-16 px-4 bg-beige text-navy py-10">
+        {/* White bordered container */}
+        <div className="w-full max-w-3xl border-x-4 border-white px-6 py-8">
+
+          {/* Heading Caption */}
+          <h2 className="text-3xl font-semibold text-center text-primary mb-8">
+            Chan Michael E. Villamor
+          </h2>
+
+          {/* Contact Info + Download Button */}
+          <div className="text-center mb-8 text-teal">
+            <p className="text-lg">Bacoor, Cavite, Philippines 4102</p>
+            <p className="text-lg">
+              Email: chanmichaelespinavillamor@gmail.com | Phone: +639617792463
+            </p>
+            <p className="text-lg mb-4">
+              <a href="https://www.linkedin.com/in/chanvillamor" className="text-blue-600">
+                LinkedIn Profile
+              </a>{' '}
+              |{' '}
+              <a href="https://chanvillamor-portfolio.netlify.app" className="text-blue-600">
+                Website/Portfolio
+              </a>
+            </p>
+
+            {/* Centered Button */}
+            <div className="flex justify-center">
+              <Button
+                label="Download CV"
+                href="/CV.pdf"
+                icon={FaDownload}
+                isExternal={true}
+                bgColor="bg-white"
+                textColor="text-black"
+                borderColor="border-teal"
+                hoverColor="hover:bg-teal"
+                fullWidth={false}
+              />
+            </div>
+          </div>
+
+
+          {/* Objective */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className="mb-8"
+          >
+            <h3 className="text-2xl font-semibold mb-2">Objective</h3>
+            <p className="text-lg text-teal">
+              "Enthusiastic computer science student eager to secure an internship in software development
+              to apply programming expertise, develop innovative solutions, and gain hands-on industry experience."
+            </p>
+          </motion.div>
+
+          {/* Career Interests */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.1 }}
+            className="mb-8"
+          >
+            <h3 className="text-2xl font-semibold mb-2">Career Interests</h3>
+            <p className="text-lg text-teal">
+              Software engineeringWeb development, UI/UX design, and system analysis—areas where creativity meets logic and innovation.
+            </p>
+          </motion.div>
+
+          {/* Education */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.2 }}
+            className="mb-8"
+          >
+            <h3 className="text-2xl font-semibold mb-2">Education</h3>
+            <p className="text-lg text-teal">
+              <strong>BS Computer Science</strong> - Cavite State University - Bacoor Campus, Cavite, Philippines
+            </p>
+            <p className="text-lg text-teal">Expected Graduation: 2026</p>
+            <p className="text-lg textteal">
+              <strong>Science, Technology, Engineering, Mathematics</strong> - Bacoor Elementary School SHS
+            </p>
+            <p className="text-lg text-teal">Graduated: 2020 - 2022</p>
+          </motion.div>
+
+          {/* Projects */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.4 }}
+            className="mb-8"
+          >
+            <h3 className="text-2xl font-semibold mb-2">Projects</h3>
+            <p className="text-lg text-teal mb-2">
+              <strong>Restaurant Web Reservation — Frontend Developer</strong>
+            </p>
+            <p className="text-lg text-teal mb-2">
+              We created a restaurant website reservation where people can book their tables ahead of time.
+            </p>
+            <p className="text-lg text-teal">
+              Technologies used: HTML, CSS, JavaScript, PHP, MySQL
+            </p>
+            <p className="text-lg text-teal mb-2">
+              Project Site:{' '}
+              <a href="https://chanvillamor.github.io/Restaurant-web-page/" className="text-blue-600">
+                Restaurant Web Page
+              </a>
+            </p>
+          </motion.div>
+
+          {/* Skills */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.6 }}
+            className="mb-8"
+          >
+            <h3 className="text-2xl font-semibold mb-2">Skills</h3>
+            <p className="text-lg text-teal mb-2">
+              <strong>Technical Skills:</strong> Basic HTML, CSS, JavaScript | Figma, Canva
+            </p>
+            <p className="text-lg text-teal mb-2">
+              <strong>Soft Skills:</strong> Communication, Teamwork, Problem-Solving, Adaptability, Organization
+            </p>
+            <p className="text-lg text-teal">
+              <strong>Language Skills:</strong> English, Filipino, Cebuano
+            </p>
+          </motion.div>
+
+          {/* Interests */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.8 }}
+            className="mb-8"
+          >
+            <h3 className="text-2xl font-semibold mb-2">Interests</h3>
+            <ul className="text-lg text-teal list-disc list-inside">
+              <li>Volleyball</li>
+              <li>Music</li>
+              <li>Reading Articles/Manga</li>
+              <li>Anime</li>
+              <li>Travel</li>
+            </ul>
+          </motion.div>
+
+          {/* Reference */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 2 }}
+            className="mb-8"
+          >
+            <h3 className="text-2xl font-semibold mb-2">Reference</h3>
+            <p className="text-lg text-teal mb-2">
+              <strong>Charles E. Villamor</strong> <br />
+              Contact: +6309384904559 | Email: charlesvillamor32@gmail.com
+            </p>
+          </motion.div>
+
+        </div>
+      </section>
+
+      <Footer />
+    </div>
+  );
+}
+
+export default Resume;

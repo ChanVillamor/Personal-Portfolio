@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Satisfy&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+   @apply font-montserrat font-normal text-teal;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
+}
+ 
+/* Infinite Scroll Animation */
+.infinite-scroll-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.infinite-scroll-items {
+  display: flex;
+  width: max-content;
+  animation: scroll 30s linear infinite;
+}
+
+.infinite-scroll-item {
+  flex-shrink: 0;
+  margin-right: 1.5rem; /* tailwind gap-6 = 1.5rem */
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+ 
