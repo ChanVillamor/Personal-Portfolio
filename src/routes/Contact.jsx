@@ -31,9 +31,9 @@ function Contact() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
-          className="text-3xl font-semibold font-satisfy text-navy text-center text-primary mb-8"
+          className="text-4xl font-semibold font-satisfy text-navy text-center text-primary mb-8"
         >
-          Get in Touch
+          📬 Get in Touch
         </motion.h2>
 
         {/* Contact Information */}
@@ -41,18 +41,18 @@ function Contact() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1.2 }}
-          className="text-center mb-8"
+          className="text-center w-full mx-auto mb-8 px-4"
         >
-          <p className="text-lg text-teal mb-2">
+          <p className="text-base md:text-lg lg:text-lg xl:text-lg text-teal mb-2">
             Feel free to reach out to me for any inquiries or collaboration opportunities!
           </p>
-          <p className="text-lg text-teal">
+          <p className="text-base md:text-lg lg:text-lg xl:text-lg text-teal">
             Email: <a href="mailto:chanmichaelespinavillamor@gmail.com" className="text-blue-600">chanmichaelespinavillamor@gmail.com</a>
           </p>
-          <p className="text-lg text-teal mb-2">
+          <p className="text-base md:text-lg lg:text-lg xl:text-lg text-teal mb-2">
             Phone: <a href="tel:+639617792463" className="text-blue-600">+639617792463</a>
           </p>
-          <p className="text-lg text-teal mb-2">
+          <p className="text-base md:text-lg lg:text-lg xl:text-lg text-teal mb-2">
             LinkedIn: <a href="https://www.linkedin.com/in/chanvillamor" className="text-blue-600">LinkedIn Profile</a>
           </p>
         </motion.div>
@@ -121,7 +121,7 @@ function Contact() {
           transition={{ duration: 1.6 }}
           className="w-full max-w-lg mx-auto text-center mt-8"
         >
-          <p className="text-lg text-teal">You can also reach out to me on my social media:</p>
+          <p className="text-base md:text-lg lg:text-lg xl:text-lg text-teal">You can also reach out to me on my social media:</p>
           <div className="flex justify-center gap-6 mt-4">
             <a href="https://www.linkedin.com/in/chanvillamor" className="text-black hover:text-teal">
               <FaLinkedin size={30} />

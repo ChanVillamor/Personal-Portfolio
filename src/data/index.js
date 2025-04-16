@@ -77,7 +77,7 @@ export const projects = [
     title: 'Restaurant Web Page',
     description: 'A sleek, restaurant reservation webpage built on the front end using HTML, CSS, and JavaScript.',
     githubLink: 'https://github.com/chanvillamor/Restaurant-web-page',
-    demoLink: 'https://jumawid-ampuan.netlify.app/',
+    demoLink: 'https://chanvillamor.github.io/Restaurant-web-page/',
     technologies: ['html5', 'css3', 'js'], // Using icon names for technologies
   },
   {
@@ -85,7 +85,7 @@ export const projects = [
     title: 'Pizza Store Web Page',
     description: 'A simple, pizza store webpage built on the front end using HTML, CSS, and JavaScript.',
     githubLink: 'https://github.com/ChanVillamor/pizzalicious-website',
-    demoLink: 'https://chanvillamor.github.io/Restaurant-web-page/',
+    demoLink: 'https://jumawid-ampuan.netlify.app/',
     technologies: ['html5', 'css3', 'js'], // Using icon names for technologies
   },
   {

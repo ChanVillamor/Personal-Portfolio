@@ -7,10 +7,10 @@ import Footer from '../components/Footer';
 function Projects() {
   return (
     <div className="flex flex-col min-h-screen bg-beige">
-      <section className="w-full min-h-screen flex flex-col items-center mt-16 px-4 bg-beige py-10">
+      <section className="w-full min-h-screen flex flex-col items-center py-24 px-4 bg-beige">
         {/* Heading Caption */}
-        <h2 className="text-3xl font-semibold font-satisfy text-navy text-center mb-8">
-          My Projects
+        <h2 className="text-4xl md:text-4xl font-semibold font-satisfy text-navy text-center mb-8">
+        💻 My Projects
         </h2>
 
         {/* Use flexbox for responsive layout */}

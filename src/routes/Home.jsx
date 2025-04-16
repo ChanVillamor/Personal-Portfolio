@@ -105,9 +105,9 @@ function Home() {
             />
             <Button
               label="Download CV"
-              href="/CV.pdf"
+              href="/portfolio/CV.pdf"
+              download={true}
               icon={FaDownload}
-              isExternal={true}
               bgColor="bg-white"
               textColor="text-black"
               borderColor="border-teal"

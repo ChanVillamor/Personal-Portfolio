@@ -13,10 +13,10 @@ function Skill() {
 
   return (
     <div className="flex flex-col min-h-screen bg-beige">
-      <section className="w-full min-h-screen flex flex-col items-center mt-24 px-4 bg-beige">
+      <section className="w-full min-h-screen flex flex-col items-center py-24 px-4 bg-beige">
         <div className="max-w-6xl w-full md:px-4 sm:px-4">
 
-          <h1 className="text-2xl md:text-4xl font-bold font-satisfy text-navy text-justify mb-4">My Skill Set</h1>
+          <h1 className="text-4xl md:text-4xl font-bold font-satisfy text-navy text-justify mb-4">🧠 My Skill Set</h1>
 
           {/* Tabs */}
           <nav className="flex justify-start gap-1 mb-6" aria-label="Skill Tabs">

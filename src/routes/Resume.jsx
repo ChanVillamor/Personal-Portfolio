@@ -9,12 +9,12 @@ function Resume() {
   return (
     <div className="flex flex-col min-h-screen bg-beige">
       {/* Main Content */}
-      <section className="flex-grow w-full flex flex-col items-center mt-16 px-4 bg-beige text-navy py-10">
+      <section className="flex-grow w-full flex flex-col items-center px-4 bg-beige text-navy py-24">
         {/* White bordered container */}
         <div className="w-full max-w-3xl border-x-4 border-white px-6 py-8">
 
           {/* Heading Caption */}
-          <h2 className="text-3xl font-semibold text-center text-primary mb-8">
+          <h2 className="text-2xl font-semibold text-center text-primary mb-8">
             Chan Michael E. Villamor
           </h2>
 
@@ -25,7 +25,7 @@ function Resume() {
               Email: chanmichaelespinavillamor@gmail.com | Phone: +639617792463
             </p>
             <p className="text-lg mb-4">
-              <a href="https://www.linkedin.com/in/chanvillamor" className="text-blue-600">
+              <a href="https://www.linkedin.com/in/chan-villamor/" className="text-blue-600">
                 LinkedIn Profile
               </a>{' '}
               |{' '}
@@ -38,9 +38,9 @@ function Resume() {
             <div className="flex justify-center">
               <Button
                 label="Download CV"
-                href="/CV.pdf"
+                href="/portfolio/CV.pdf"
+                download={true}
                 icon={FaDownload}
-                isExternal={true}
                 bgColor="bg-white"
                 textColor="text-black"
                 borderColor="border-teal"
@@ -58,8 +58,8 @@ function Resume() {
             transition={{ duration: 1 }}
             className="mb-8"
           >
-            <h3 className="text-2xl font-semibold mb-2">Objective</h3>
-            <p className="text-lg text-teal">
+            <h3 className="text-xl font-semibold mb-2">Objective</h3>
+            <p className="text-md text-teal text-justify">
               "Enthusiastic computer science student eager to secure an internship in software development
               to apply programming expertise, develop innovative solutions, and gain hands-on industry experience."
             </p>
@@ -72,8 +72,8 @@ function Resume() {
             transition={{ duration: 1.1 }}
             className="mb-8"
           >
-            <h3 className="text-2xl font-semibold mb-2">Career Interests</h3>
-            <p className="text-lg text-teal">
+            <h3 className="text-xl font-semibold mb-2">Career Interests</h3>
+            <p className="text-md text-teal text-justify">
               Software engineeringWeb development, UI/UX design, and system analysis—areas where creativity meets logic and innovation.
             </p>
           </motion.div>
@@ -85,15 +85,15 @@ function Resume() {
             transition={{ duration: 1.2 }}
             className="mb-8"
           >
-            <h3 className="text-2xl font-semibold mb-2">Education</h3>
-            <p className="text-lg text-teal">
+            <h3 className="text-xl font-semibold mb-2">Education</h3>
+            <p className="text-md text-teal text-justify">
               <strong>BS Computer Science</strong> - Cavite State University - Bacoor Campus, Cavite, Philippines
             </p>
-            <p className="text-lg text-teal">Expected Graduation: 2026</p>
-            <p className="text-lg textteal">
+            <p className="text-md text-teal">Expected Graduation: 2026</p>
+            <p className="text-md text-teal text-justify">
               <strong>Science, Technology, Engineering, Mathematics</strong> - Bacoor Elementary School SHS
             </p>
-            <p className="text-lg text-teal">Graduated: 2020 - 2022</p>
+            <p className="text-md text-teal">Graduated: 2020 - 2022</p>
           </motion.div>
 
           {/* Projects */}
@@ -103,17 +103,17 @@ function Resume() {
             transition={{ duration: 1.4 }}
             className="mb-8"
           >
-            <h3 className="text-2xl font-semibold mb-2">Projects</h3>
-            <p className="text-lg text-teal mb-2">
+            <h3 className="text-xl font-semibold mb-2">Projects</h3>
+            <p className="text-md text-teal mb-2 text-justify">
               <strong>Restaurant Web Reservation — Frontend Developer</strong>
             </p>
-            <p className="text-lg text-teal mb-2">
+            <p className="text-md text-teal mb-2 text-justify">
               We created a restaurant website reservation where people can book their tables ahead of time.
             </p>
-            <p className="text-lg text-teal">
+            <p className="text-md text-teal text-justify">
               Technologies used: HTML, CSS, JavaScript, PHP, MySQL
             </p>
-            <p className="text-lg text-teal mb-2">
+            <p className="text-md text-teal mb-2">
               Project Site:{' '}
               <a href="https://chanvillamor.github.io/Restaurant-web-page/" className="text-blue-600">
                 Restaurant Web Page
@@ -128,14 +128,14 @@ function Resume() {
             transition={{ duration: 1.6 }}
             className="mb-8"
           >
-            <h3 className="text-2xl font-semibold mb-2">Skills</h3>
-            <p className="text-lg text-teal mb-2">
+            <h3 className="text-xl font-semibold mb-2">Skills</h3>
+            <p className="text-md text-teal mb-2 text-justify">
               <strong>Technical Skills:</strong> Basic HTML, CSS, JavaScript | Figma, Canva
             </p>
-            <p className="text-lg text-teal mb-2">
+            <p className="text-md text-teal mb-2 text-justify">
               <strong>Soft Skills:</strong> Communication, Teamwork, Problem-Solving, Adaptability, Organization
             </p>
-            <p className="text-lg text-teal">
+            <p className="text-md text-teal text-justify">
               <strong>Language Skills:</strong> English, Filipino, Cebuano
             </p>
           </motion.div>
@@ -147,8 +147,8 @@ function Resume() {
             transition={{ duration: 1.8 }}
             className="mb-8"
           >
-            <h3 className="text-2xl font-semibold mb-2">Interests</h3>
-            <ul className="text-lg text-teal list-disc list-inside">
+            <h3 className="text-xl font-semibold mb-2">Interests</h3>
+            <ul className="text-md text-teal list-disc list-inside">
               <li>Volleyball</li>
               <li>Music</li>
               <li>Reading Articles/Manga</li>
@@ -164,8 +164,8 @@ function Resume() {
             transition={{ duration: 2 }}
             className="mb-8"
           >
-            <h3 className="text-2xl font-semibold mb-2">Reference</h3>
-            <p className="text-lg text-teal mb-2">
+            <h3 className="text-xl font-semibold mb-2">Reference</h3>
+            <p className="text-md text-teal mb-2 text-justify">
               <strong>Charles E. Villamor</strong> <br />
               Contact: +6309384904559 | Email: charlesvillamor32@gmail.com
             </p>

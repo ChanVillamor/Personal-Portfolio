@@ -6,11 +6,12 @@ const Button = ({
   href = '#',
   icon: Icon = null,
   isExternal = false,
+  download = false,
   bgColor = 'bg-white',
   textColor = 'text-black',
-  borderColor = 'border-white', // default to white border
+  borderColor = 'border-white',
   hoverColor = 'hover:bg-sky-700',
-  fullWidth = false, // allow control over full width
+  fullWidth = false,
 }) => {
   const baseClasses = `
     flex items-center justify-center gap-2 rounded-lg px-4 py-2 font-medium text-sm transition-all duration-300
@@ -25,11 +26,26 @@ const Button = ({
     </span>
   );
 
-  return isExternal ? (
-    <a href={href} target="_blank" rel="noopener noreferrer" className={baseClasses}>
-      {content}
-    </a>
-  ) : (
+  // Download link (uses <a> with download attribute)
+  if (download) {
+    return (
+      <a href={href} download className={baseClasses}>
+        {content}
+      </a>
+    );
+  }
+
+  // External link
+  if (isExternal) {
+    return (
+      <a href={href} target="_blank" rel="noopener noreferrer" className={baseClasses}>
+        {content}
+      </a>
+    );
+  }
+
+  // Internal router link
+  return (
     <Link to={href} className={baseClasses}>
       {content}
     </Link>

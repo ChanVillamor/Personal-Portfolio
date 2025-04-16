@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 function Plan() {
   return (
     <div className="flex flex-col min-h-screen bg-beige">
-      <section className="w-full min-h-screen flex flex-col items-center mt-16 px-4 bg-beige0 py-10">
+      <section className="w-full min-h-screen flex flex-col items-center px-4 bg-beige0 py-24">
         <motion.div
           className="max-w-4xl w-full"
           initial={{ opacity: 0, y: 30 }}

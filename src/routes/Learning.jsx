@@ -49,7 +49,7 @@ const sections = [
       {
         heading: 'Structured Self-Study',
         description:
-          "I started planning weekly goals and using tools like Notion to track what I was working on. Even on slow days, seeing a checklist helped me stay consistent and focused."
+          "I started planning weekly goals and using tools like notes or google tasks to track what I was working on. Even on slow days, seeing a checklist helped me stay consistent and focused."
       },
       {
         heading: 'Managing Self-Doubt',
@@ -59,7 +59,7 @@ const sections = [
       {
         heading: 'Filtering Resources',
         description:
-          "I began curating and sticking to specific learning paths. Instead of bouncing between tutorials, I created a personal reference library of tools, cheat sheets, and articles that actually helped me move forward."
+          "I began curating and sticking to specific learning paths. Instead of bouncing between tutorials, I have a personal reference library of tools, cheat sheets, and resources that actually helped me move forward."
       }
     ]
   },
@@ -84,9 +84,9 @@ function Learning() {
 
   return (
     <div className="flex flex-col min-h-screen bg-beige">
-      <section className='w-full min-h-screen flex flex-col items-center mt-24 px-4 bg-beige py-10'>
+      <section className='w-full min-h-screen flex flex-col items-center pt-24 px-4 bg-beige'>
         <div className="max-w-3xl w-full">
-          <h1 className="text-2xl md:text-4xl font-semibold font-satisfy text-navy mb-6 text-center">Challenges & Learnings</h1>
+          <h1 className="text-4xl md:text-4xl font-semibold font-satisfy text-navy mb-6 text-center">🧗‍♂️ Challenges & Learnings</h1>
 
           {sections.map((section, index) => (
             <div key={index} className="mb-4 border border-gray-300 rounded-md bg-white shadow-sm">
