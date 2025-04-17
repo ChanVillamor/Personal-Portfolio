@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa';
 import Footer from '../components/Footer';
+import emailjs from '@emailjs/browser';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -9,28 +10,28 @@ const fadeUp = {
 };
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const form = useRef();
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    console.log('Form submitted', formData);
+
+    emailjs
+      .sendForm('service_kcdfnxj', 'template_yx2r5gu', form.current, {
+        publicKey: 'P2cbuqMWHo8eC1aNC',
+      })
+      .then(() => {
+        alert("✅ Message sent successfully!");
+        form.current.reset();
+      })
+      .catch((error) => {
+        alert("❌ Something went wrong. Please try again.");
+        console.error('FAILED...', error);
+      });
   };
 
   return (
     <div className="flex flex-col min-h-screen bg-beige">
       <section className="w-full min-h-screen flex flex-col items-center mt-16 px-4 bg-beige py-10">
-        {/* Heading Caption */}
         <motion.h2
           variants={fadeUp}
           initial="hidden"
@@ -42,7 +43,6 @@ function Contact() {
           📬 Get in Touch
         </motion.h2>
 
-        {/* Contact Information */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -54,48 +54,39 @@ function Contact() {
           <p className="text-base md:text-lg text-teal mb-2">
             Feel free to reach out to me for any inquiries or collaboration opportunities!
           </p>
-          <p className="text-base md:text-lg lg:text-lg text-teal">
+          <p className="text-base md:text-lg text-teal">
             Email: <a href="mailto:chanmichaelespinavillamor@gmail.com" className="text-blue-600">chanmichaelespinavillamor@gmail.com</a>
-          </p>
-          <p className="text-base md:text-lg lg:text-lg text-teal mb-2">
-            Phone: <a href="tel:+639617792463" className="text-blue-600">+639617792463</a>
-          </p>
-          <p className="text-base md:text-lg lg:text-lg text-teal mb-2">
-            LinkedIn: <a href="https://www.linkedin.com/in/chanvillamor" className="text-blue-600">LinkedIn Profile</a>
           </p>
         </motion.div>
 
         {/* Contact Form */}
         <motion.form
+          ref={form}
+          onSubmit={sendEmail}
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 1.2 }}
-          onSubmit={handleSubmit}
           className="w-full max-w-lg mx-auto bg-white p-6 shadow-lg rounded-lg"
         >
           <div className="mb-4">
-            <label htmlFor="name" className="block text-lg text-navy mb-2">Full Name</label>
+            <label htmlFor="user_name" className="block text-lg text-navy mb-2">Full Name</label>
             <input
               type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
+              id="user_name"
+              name="user_name"
               className="w-full px-4 py-2 border rounded-lg text-navy focus:outline-none focus:ring-2 focus:ring-teal"
               required
             />
           </div>
 
           <div className="mb-4">
-            <label htmlFor="email" className="block text-lg text-navy mb-2">Email Address</label>
+            <label htmlFor="user_email" className="block text-lg text-navy mb-2">Email Address</label>
             <input
               type="email"
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
+              id="user_email"
+              name="user_email"
               className="w-full px-4 py-2 border rounded-lg text-navy focus:outline-none focus:ring-2 focus:ring-teal"
               required
             />
@@ -106,8 +97,6 @@ function Contact() {
             <textarea
               id="message"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
               className="w-full px-4 py-2 border rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-teal"
               rows="4"
               required
@@ -124,7 +113,7 @@ function Contact() {
           </div>
         </motion.form>
 
-        {/* Social Media Links */}
+        {/* Social Links */}
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -133,23 +122,16 @@ function Contact() {
           transition={{ duration: 1.4 }}
           className="w-full max-w-lg mx-auto text-center mt-8"
         >
-          <p className="text-md md:text-lg lg:text-lg text-teal">You can also reach out to me on my social media:</p>
+          <p className="text-md md:text-lg text-teal">You can also reach out to me on my social media:</p>
           <div className="flex justify-center gap-6 mt-4">
-            <a href="https://www.linkedin.com/in/chanvillamor" className="text-black hover:text-teal" aria-label="LinkedIn">
-              <FaLinkedin size={30} />
-            </a>
-            <a href="https://github.com/ChanVillamor" className="text-black hover:text-teal" aria-label="GitHub">
-              <FaGithub size={30} />
-            </a>
-            <a href="https://www.instagram.com/chanvillamor" className="text-black hover:text-teal" aria-label="Instagram">
-              <FaInstagram size={30} />
-            </a>
-            <a href="https://www.facebook.com/chanvillamor" className="text-black hover:text-teal" aria-label="Facebook">
-              <FaFacebook size={30} />
-            </a>
+            <a href="https://www.linkedin.com/in/chanvillamor" className="text-black hover:text-teal" aria-label="LinkedIn"><FaLinkedin size={30} /></a>
+            <a href="https://github.com/ChanVillamor" className="text-black hover:text-teal" aria-label="GitHub"><FaGithub size={30} /></a>
+            <a href="https://www.instagram.com/chanvillamor" className="text-black hover:text-teal" aria-label="Instagram"><FaInstagram size={30} /></a>
+            <a href="https://www.facebook.com/chanvillamor" className="text-black hover:text-teal" aria-label="Facebook"><FaFacebook size={30} /></a>
           </div>
         </motion.div>
       </section>
+
       <Footer />
     </div>
   );

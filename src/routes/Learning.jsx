@@ -39,7 +39,7 @@ const sections = [
       {
         heading: 'Breaking Down the Backend',
         description:
-          "I stopped trying to learn everything at once. I focused on small projects and real-world examples to understand Laravel logic and database interactions better. Step-by-step, it started making more sense."
+          "I stopped trying to learn everything at once. I focused on small projects and real-world examples to understand the logic and database interactions better. Step-by-step, it started making more sense."
       },
       {
         heading: 'Responsive Design',

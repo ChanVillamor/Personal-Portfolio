@@ -31,7 +31,7 @@ function Plan() {
                     <p className='text-justify text-teal'>
                       I want to become more than just someone who builds websites—I want to be someone who{' '}
                       <span className="font-medium">crafts experiences</span>. My goal is to confidently work as a{' '}
-                      <span className="font-medium">full-stack developer</span>, mastering tools like React, Laravel,
+                      <span className="font-medium">Software Engineer</span>, mastering tools like React, Php,
                       and exploring deeper with technologies like Next.js, Node.js, and RESTful APIs.
                     </p>
                     <p className="mt-2 text-justify text-teal">

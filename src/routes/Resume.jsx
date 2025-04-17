@@ -143,7 +143,7 @@ function Resume() {
           <motion.div className="mb-8" variants={itemVariants}>
             <h3 className="text-xl font-semibold mb-2">Skills</h3>
             <p className="text-md text-teal mb-1 text-justify">
-              <strong>Technical Skills:</strong> Basic HTML, CSS, JavaScript, Php, MySql, Tailwind | Figma, Canva
+              <strong>Technical Skills:</strong> Basic HTML, CSS, JavaScript, Php, MySQL, Tailwind | Figma, Canva
             </p>
             <p className="text-md text-teal mb-1 text-justify">
               <strong>Soft Skills:</strong> Communication, Teamwork, Problem-Solving, Adaptability, Organization

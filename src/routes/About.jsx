@@ -110,11 +110,10 @@ function About() {
           >
             <h2 className="text-xl font-bold text-navy">💻 Career Interests</h2>
             <ul className="list-disc ml-6 text-base md:text-lg">
-              <li>Software Development</li>
-              <li>Web Development (React, Tailwind)</li>
-              <li>UI/UX Design</li>
-              <li>Front-End Projects</li>
               <li>Internship in Tech Industry (2025)</li>
+              <li>Software Engineering</li>
+              <li>UI/UX Design</li>
+              <li>Technical Growth</li>
             </ul>
           </motion.div>
 
@@ -166,7 +165,7 @@ function About() {
                 {
                   icon: <FaInstagram className="text-black text-xl" />,
                   label: 'Instagram',
-                  href: 'https://instagram.com/booshaider',
+                  href: 'https://instagram.com/booshaiderr',
                 },
                 {
                   icon: <FaLinkedinIn className="text-black text-xl" />,
