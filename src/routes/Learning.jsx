@@ -75,6 +75,11 @@ const sections = [
   }
 ];
 
+const fadeUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0 }
+};
+
 function Learning() {
   const [activeIndex, setActiveIndex] = useState(null);
 
@@ -84,12 +89,29 @@ function Learning() {
 
   return (
     <div className="flex flex-col min-h-screen bg-beige">
-      <section className='w-full min-h-screen flex flex-col items-center pt-24 px-4 bg-beige'>
-        <div className="max-w-3xl w-full">
-          <h1 className="text-4xl md:text-4xl font-semibold font-satisfy text-navy mb-6 text-center">🧗‍♂️ Challenges & Learnings</h1>
+      <section className="w-full min-h-screen flex flex-col items-center pt-24 px-4 bg-beige">
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          variants={fadeUp}
+          className="max-w-3xl w-full"
+        >
+          <h1 className="text-4xl md:text-4xl font-semibold font-satisfy text-navy mb-6 text-center">
+            🧗‍♂️ Challenges & Learnings
+          </h1>
 
           {sections.map((section, index) => (
-            <div key={index} className="mb-4 border border-gray-300 rounded-md bg-white shadow-sm">
+            <motion.div
+              key={index}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              variants={fadeUp}
+              className="mb-4 border border-gray-300 rounded-md bg-white shadow-sm"
+            >
               <button
                 onClick={() => toggleSection(index)}
                 className="w-full text-left px-4 py-3 flex justify-between items-center font-medium text-gray-800 hover:bg-gray-100 transition"
@@ -101,26 +123,26 @@ function Learning() {
               <AnimatePresence>
                 {activeIndex === index && (
                   <motion.div
-                    initial={{ opacity: 0, height: 0 }}
-                    animate={{ opacity: 1, height: 'auto' }}
-                    exit={{ opacity: 0, height: 0 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
                     transition={{ duration: 0.3 }}
                     className="overflow-hidden px-4 pb-4 text-gray-700 space-y-4"
                   >
                     {section.content.map((item, idx) => (
                       <div key={idx}>
                         {item.heading && <h3 className="font-semibold">{item.heading}</h3>}
-                        <p>{item.description}</p>
+                        <p className='text-justify text-teal'>{item.description}</p>
                       </div>
                     ))}
                   </motion.div>
                 )}
               </AnimatePresence>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

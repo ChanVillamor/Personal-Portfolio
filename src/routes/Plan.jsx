@@ -28,19 +28,19 @@ function Plan() {
                 title: '💻 Career & Skills Growth',
                 content: (
                   <>
-                    <p>
+                    <p className='text-justify text-teal'>
                       I want to become more than just someone who builds websites—I want to be someone who{' '}
                       <span className="font-medium">crafts experiences</span>. My goal is to confidently work as a{' '}
                       <span className="font-medium">full-stack developer</span>, mastering tools like React, Laravel,
                       and exploring deeper with technologies like Next.js, Node.js, and RESTful APIs.
                     </p>
-                    <p className="mt-2">
+                    <p className="mt-2 text-justify text-teal">
                       Design will always be close to my heart. I'm continuously exploring{' '}
                       <span className="font-medium">UI/UX design</span>, aiming to create clean, accessible, and
                       intuitive interfaces. Learning design systems, motion graphics, and improving my Figma workflow
                       are all part of this plan.
                     </p>
-                    <p className="mt-2">
+                    <p className="mt-2 text-justify text-teal">
                       Eventually, I want to <span className="italic">launch my own app or platform</span>—something
                       that not only works, but speaks to people.
                     </p>
@@ -50,7 +50,7 @@ function Plan() {
               {
                 title: '🌏 Community & Collaboration',
                 content: (
-                  <p>
+                  <p className='text-justify text-teal'>
                     I see myself actively participating in developer communities, contributing to open source, and
                     even mentoring others. I want to collaborate on meaningful projects, especially with people who
                     share the same energy and mindset.
@@ -61,19 +61,19 @@ function Plan() {
                 title: '🌟 Personal Growth',
                 content: (
                   <ul className="list-disc list-inside space-y-1">
-                    <li>
-                      <span className="font-medium">Confidence</span> – Learning to speak up, trust my ideas, and
+                    <li className='text-justify text-teal'>
+                      <span className="font-medium ">Confidence</span> – Learning to speak up, trust my ideas, and
                       present myself without hesitation.
                     </li>
-                    <li>
+                    <li className='text-justify text-teal'>
                       <span className="font-medium">Communication</span> – Expressing thoughts clearly, giving
                       feedback, and collaborating more effectively.
                     </li>
-                    <li>
+                    <li className='text-justify text-teal'>
                       <span className="font-medium">Mindset</span> – Building resilience and a growth-oriented
                       perspective. Mistakes = lessons.
                     </li>
-                    <li>
+                    <li className='text-justify text-teal'>
                       <span className="font-medium">Balance</span> – Making space for volleyball, music, podcasts,
                       anime, and traveling. These fuel creativity and well-being.
                     </li>
@@ -83,7 +83,7 @@ function Plan() {
               {
                 title: '🛤️ Long-Term Vision',
                 content: (
-                  <p>
+                  <p className='text-justify text-teal'>
                     In the long run, I dream of working on projects that create impact—joining a company or startup
                     that values creativity, innovation, and collaboration. And maybe one day…{' '}
                     <span className="italic">starting something of my own</span>.

@@ -3,6 +3,7 @@ import { FaDownload, FaEnvelope, FaChevronLeft, FaChevronRight } from 'react-ico
 import Button from '../components/Button';
 import { navLinks } from '../data';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import profilePicHome from '../assets/my-img/my-img3.jpg';
 
 function Home() {
@@ -39,14 +40,21 @@ function Home() {
   return (
     <section className="min-h-screen flex flex-col justify-center items-center text-center bg-beige px-4">
       <div className="flex flex-col-reverse lg:flex-row justify-between items-center gap-8 max-w-5xl w-full">
-        {/* Text Content */}
-        <div className="text-center lg:text-left w-full">
+
+        {/* Text Content with animation */}
+        <motion.div
+          className="text-center lg:text-left w-full"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-navy mb-4 font-satisfy">
-            Hi, I'm Chan Michael Villamor
+            👋 Hi, I'm Chan Michael Villamor
           </h1>
           <p className="text-lg text-black mb-6">
-            Aspiring UI/UX Designer and Software Engineer
+            👨‍💻 Aspiring Software Engineer & 🎨 UI/UX Designer
           </p>
+
 
           {/* Scrollable Nav with Arrows */}
           <div className="relative w-full mb-6">
@@ -65,20 +73,27 @@ function Home() {
             >
               <ul className="flex space-x-6 min-w-max">
                 {navLinks.map((link, index) => (
-                  <li key={index} className="whitespace-nowrap">
+                  <li key={index} className="whitespace-nowrap group">
                     <Link
                       to={link.href}
-                      className={`text-teal font-medium transition duration-300 border-b-2 ${
-                        location.pathname === link.href
-                          ? 'border-navy text-navy'
-                          : 'border-transparent hover:border-navy hover:text-navy'
+                      className={`relative text-teal font-medium transition duration-300 ${
+                        location.pathname === link.href ? 'text-navy' : 'hover:text-navy'
                       }`}
                     >
                       {link.label}
+                      <span
+                        className={`absolute left-0 -bottom-0.5 w-full h-[2px] bg-navy transform transition-transform duration-300 origin-left ${
+                          location.pathname === link.href
+                            ? 'scale-x-100'
+                            : 'scale-x-0 group-hover:scale-x-100'
+                        }`}
+                      ></span>
                     </Link>
                   </li>
                 ))}
               </ul>
+
+
             </nav>
 
             {showRight && (
@@ -114,14 +129,17 @@ function Home() {
               hoverColor="hover:bg-teal"
             />
           </div>
-        </div>
+        </motion.div>
 
-        {/* Profile Picture with Cute Background Container */}
-        <div className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96 overflow-hidden">
-          {/* Curly background container */}
+        {/* Profile Picture with animation */}
+        <motion.div
+          className="relative w-56 h-56 sm:w-72 sm:h-72 lg:w-96 lg:h-96 overflow-hidden"
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+        >
           <div className="absolute inset-0 bg-gradient-to-r from-blue-800 via-purple-700 to-green-900 opacity-50 rounded-full"></div>
-          
-          {/* Profile Image */}
+
           <div className="relative z-10 w-full h-full flex justify-center items-center border-8 border-transparent rounded-full bg-clip-border bg-gradient-to-tl from-blue-500 to-green-500">
             <img
               src={profilePicHome}
@@ -130,10 +148,8 @@ function Home() {
             />
           </div>
 
-          {/* Curly border */}
           <div className="absolute top-0 left-0 right-0 bottom-0 border-8 border-dashed border-indigo-500 z-0 rounded-full"></div>
-        </div>
-
+        </motion.div>
       </div>
     </section>
   );

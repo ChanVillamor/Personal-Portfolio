@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa'; // Import React Icons
+import { FaLinkedin, FaGithub, FaInstagram, FaFacebook } from 'react-icons/fa';
 import Footer from '../components/Footer';
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 30 },
+  visible: { opacity: 1, y: 0 }
+};
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -19,7 +24,6 @@ function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here (you can send data to an API or email service)
     console.log('Form submitted', formData);
   };
 
@@ -28,9 +32,11 @@ function Contact() {
       <section className="w-full min-h-screen flex flex-col items-center mt-16 px-4 bg-beige py-10">
         {/* Heading Caption */}
         <motion.h2
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
           className="text-4xl font-semibold font-satisfy text-navy text-center text-primary mb-8"
         >
           📬 Get in Touch
@@ -38,30 +44,34 @@ function Contact() {
 
         {/* Contact Information */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2 }}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
           className="text-center w-full mx-auto mb-8 px-4"
         >
-          <p className="text-base md:text-lg lg:text-lg xl:text-lg text-teal mb-2">
+          <p className="text-base md:text-lg text-teal mb-2">
             Feel free to reach out to me for any inquiries or collaboration opportunities!
           </p>
-          <p className="text-base md:text-lg lg:text-lg xl:text-lg text-teal">
+          <p className="text-base md:text-lg lg:text-lg text-teal">
             Email: <a href="mailto:chanmichaelespinavillamor@gmail.com" className="text-blue-600">chanmichaelespinavillamor@gmail.com</a>
           </p>
-          <p className="text-base md:text-lg lg:text-lg xl:text-lg text-teal mb-2">
+          <p className="text-base md:text-lg lg:text-lg text-teal mb-2">
             Phone: <a href="tel:+639617792463" className="text-blue-600">+639617792463</a>
           </p>
-          <p className="text-base md:text-lg lg:text-lg xl:text-lg text-teal mb-2">
+          <p className="text-base md:text-lg lg:text-lg text-teal mb-2">
             LinkedIn: <a href="https://www.linkedin.com/in/chanvillamor" className="text-blue-600">LinkedIn Profile</a>
           </p>
         </motion.div>
 
         {/* Contact Form */}
         <motion.form
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.4 }}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
           onSubmit={handleSubmit}
           className="w-full max-w-lg mx-auto bg-white p-6 shadow-lg rounded-lg"
         >
@@ -116,29 +126,31 @@ function Contact() {
 
         {/* Social Media Links */}
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.6 }}
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ duration: 1.4 }}
           className="w-full max-w-lg mx-auto text-center mt-8"
         >
-          <p className="text-base md:text-lg lg:text-lg xl:text-lg text-teal">You can also reach out to me on my social media:</p>
+          <p className="text-md md:text-lg lg:text-lg text-teal">You can also reach out to me on my social media:</p>
           <div className="flex justify-center gap-6 mt-4">
-            <a href="https://www.linkedin.com/in/chanvillamor" className="text-black hover:text-teal">
+            <a href="https://www.linkedin.com/in/chanvillamor" className="text-black hover:text-teal" aria-label="LinkedIn">
               <FaLinkedin size={30} />
             </a>
-            <a href="https://github.com/ChanVillamor" className="text-black hover:text-teal">
+            <a href="https://github.com/ChanVillamor" className="text-black hover:text-teal" aria-label="GitHub">
               <FaGithub size={30} />
             </a>
-            <a href="https://www.instagram.com/chanvillamor" className="text-black hover:text-teal">
+            <a href="https://www.instagram.com/chanvillamor" className="text-black hover:text-teal" aria-label="Instagram">
               <FaInstagram size={30} />
             </a>
-            <a href="https://www.facebook.com/chanvillamor" className="text-black hover:text-teal">
+            <a href="https://www.facebook.com/chanvillamor" className="text-black hover:text-teal" aria-label="Facebook">
               <FaFacebook size={30} />
             </a>
           </div>
         </motion.div>
       </section>
-      <Footer/>
+      <Footer />
     </div>
   );
 }

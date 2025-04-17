@@ -4,7 +4,7 @@ export const navLinks = [
    { href: "/about", label: "About Me" },
    { href: "/skill", label: "Skill" },
    { href: "/projects", label: "Project" },
-   { href: "/learning", label: "Learning" },
+   { href: "/challenge", label: "Challenge" },
    { href: "/plan", label: "Future Plan" },  // Changed href for future plan
    { href: "/resume", label: "Resume" },    // Changed href for resume section
    { href: "/contact", label: "Contact" },
