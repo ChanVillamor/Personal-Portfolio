@@ -76,7 +76,7 @@ function About() {
               <h2 className="text-lg font-semibold text-navy">📌 Basic Information</h2>
               <ul className="space-y-2">
                 <li><strong>Full Name:</strong> Chan Michael Espina Villamor</li>
-                <li><strong>Nickname:</strong> Chan/Boo</li>
+                <li><strong>Nickname:</strong> Chan</li>
                 <li><strong>Age:</strong> 21</li>
                 <li><strong>Date of Birth:</strong> November 16, 2003</li>
                 <li><strong>Place of Birth:</strong> Villaba, Leyte, Philippines</li>
@@ -158,22 +158,22 @@ function About() {
             <div className="flex flex-wrap justify-start gap-4">
               {[
                 {
-                  icon: <FaFacebookF className="text-black text-xl" />,
+                  icon: FaFacebookF,
                   label: 'Facebook',
                   href: 'https://web.facebook.com/chan.villamor.378/',
                 },
                 {
-                  icon: <FaInstagram className="text-black text-xl" />,
+                  icon: FaInstagram,
                   label: 'Instagram',
                   href: 'https://instagram.com/booshaiderr',
                 },
                 {
-                  icon: <FaLinkedinIn className="text-black text-xl" />,
+                  icon: FaLinkedinIn,
                   label: 'LinkedIn',
                   href: 'https://www.linkedin.com/in/chan-villamor/',
                 },
                 {
-                  icon: <FaGithub className="text-black text-xl" />,
+                  icon: FaGithub,
                   label: 'GitHub',
                   href: 'https://github.com/ChanVillamor',
                 },
@@ -183,14 +183,17 @@ function About() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-3 px-4 py-2 w-40 bg-white rounded-lg border-teal border-2 hover:bg-teal transition shadow-sm"
+                  className="group flex items-center gap-3 px-4 py-2 w-40 bg-white rounded-lg border-teal border-2 hover:bg-teal transition shadow-sm"
                   whileHover={{ scale: 1.05 }}
                 >
-                  {item.icon}
-                  <span className="font-medium text-black">{item.label}</span>
+                  <item.icon className="text-black text-xl transition-colors group-hover:text-white" />
+                  <span className="font-medium text-black transition-colors group-hover:text-white">
+                    {item.label}
+                  </span>
                 </motion.a>
               ))}
             </div>
+
           </motion.div>
         </div>
       </section>

@@ -113,10 +113,10 @@ function Home() {
               href="/contact"
               icon={FaEnvelope}
               isExternal={false}
-              bgColor="bg-white"
-              textColor="text-black"
+              bgColor="bg-teal"
+              textColor="text-white"
               borderColor="border-teal"
-              hoverColor="hover:bg-teal"
+              hoverColor="hover:bg-white"
             />
             <Button
               label="Download CV"
@@ -127,6 +127,7 @@ function Home() {
               textColor="text-black"
               borderColor="border-teal"
               hoverColor="hover:bg-teal"
+              hoverText="hover:text-white"
             />
           </div>
         </motion.div>

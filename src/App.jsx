@@ -1,4 +1,5 @@
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { useLocation, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 
 import Home from './routes/Home';
@@ -11,6 +12,14 @@ import Resume from './routes/Resume';
 import Contact from './routes/Contact';
 
 function App() {
+  
+  const location = useLocation();
+
+  // ✅ Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo({ top: 0 });
+  }, [location.pathname]);
+
   return (
     <div className="">
       <Routes>

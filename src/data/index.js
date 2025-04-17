@@ -94,7 +94,7 @@ export const projects = [
     description: 'A straightforward calculator built with JavaScript, offering essential functions for basic arithmetic operations.',
     githubLink: 'https://github.com/ChanVillamor/Simple-Calculator',
     demoLink: 'https://chanvillamor.github.io/Simple-Calculator/',
-    technologies: ['js'], // Icon names for technologies
+    technologies: ['html5', 'css3', 'js'], // Icon names for technologies
   },
   {
     image: quote,
@@ -102,7 +102,7 @@ export const projects = [
     description: 'A JavaScript-powered web-based quote generator that uses an array to display inspiring quotes.',
     githubLink: 'https://github.com/ChanVillamor/learning-DOM---JS/tree/main/PR1%20Quote%20generator%20js',
     demoLink: 'https://chanvillamor.github.io/learning-DOM---JS/PR1%20Quote%20generator%20js/',
-    technologies: ['js'], // Icon names for technologies
+    technologies: ['html5', 'css3', 'js'], // Icon names for technologies
   },
 ];
 

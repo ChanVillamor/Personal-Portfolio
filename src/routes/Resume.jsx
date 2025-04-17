@@ -28,9 +28,9 @@ function Resume() {
   return (
     <div className="flex flex-col min-h-screen bg-beige">
       {/* Resume Content */}
-      <section className="flex-grow w-full flex flex-col items-center px-4 bg-beige text-navy py-24">
+      <section className="flex-grow w-full flex flex-col items-center px-3 bg-beige text-navy py-24">
         <motion.div
-          className="w-full max-w-3xl border-x-4 border-white px-6 py-8"
+          className="w-full max-w-3xl border-x-4 border-white px-4 py-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -45,11 +45,14 @@ function Resume() {
 
           {/* Contact Info and Button */}
           <motion.div className="text-center mb-8 text-teal" variants={itemVariants}>
-            <p className="text-lg">Bacoor, Cavite, Philippines 4102</p>
-            <p className="text-lg ">
-              Email: <span>chanmichaelespinavillamor@gmail.com </span>| Phone: +639617792463
+            <p className="text-base md:text-lg lg:text-lg ">Bacoor, Cavite, Philippines 4102</p>
+            <p className="text-base md:text-lg lg:text-lg">
+              Email: <span>chanmichaelespinavillamor@gmail.com </span> 
             </p>
-            <p className="text-lg mb-4">
+            <p className="text-base md:text-lg lg:text-lg ">
+              Phone: <span>+639617792463</span>
+            </p>
+            <p className="text-base md:text-lg lg:text-lg mb-4">
               <a
                 href="https://www.linkedin.com/in/chan-villamor/"
                 className="text-blue-600"
@@ -78,6 +81,7 @@ function Resume() {
                 textColor="text-black"
                 borderColor="border-teal"
                 hoverColor="hover:bg-teal"
+                hoverText="hover:text-white"
                 fullWidth={false}
               />
             </div>
@@ -109,7 +113,7 @@ function Resume() {
             <p className="text-md text-teal">- 2022 - Present</p>
             <br />
             <p className="text-md text-teal text-justify">
-              <strong>Science, Technology, Engineering, Mathematics</strong> - Bacoor Elementary School SHS
+              <strong>Science, Technology, Engineering, Mathematics</strong> - Senior High School within Bacoor Elementary School
             </p>
             <p className="text-md text-teal">- 2020 - 2022</p>
           </motion.div>

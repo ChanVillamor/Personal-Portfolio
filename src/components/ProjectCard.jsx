@@ -33,11 +33,11 @@ const ProjectCard = ({ image, title, description, githubLink, demoLink, technolo
           <Button
             label="Code"
             href={githubLink}
-            bgColor="bg-navy"
-            textColor="text-white"
+            bgColor="bg-beige"
+            textColor="text-black"
             textSize="text-sm"
-            borderColor="border-teal"
-            hoverColor='hover:bg-teal'
+            borderColor="border-blue-700"
+            hoverColor='hover:bg-blue-200'
           />
           <Button
             label="Demo"
@@ -46,7 +46,7 @@ const ProjectCard = ({ image, title, description, githubLink, demoLink, technolo
             textColor="text-black"
             textSize="text-sm"
             borderColor="border-red-700"
-            hoverColor='hover:bg-beige'
+            hoverColor='hover:bg-red-200'
           />
         </div>
       </div>

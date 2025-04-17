@@ -86,7 +86,7 @@ function Skill() {
                 >
                   <h3 className="text-xl font-semibold text-navy mb-2">UI/UX Design</h3>
                   <p className="text-teal mb-2 text-justify">
-                    Passionate about designing intuitive and user-centered interfaces. Currently learning the basics of wireframing, prototyping, and visual design to create user-friendly experiences.
+                    Passionate about designing intuitive and user-centered interfaces. Currently learning the basics of wireframing and visual design to create user-friendly experiences.
                   </p>
                   <ul className="list-disc list-inside space-y-1 text-teal">
                     <li>Figma</li>
